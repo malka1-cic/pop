@@ -19,8 +19,8 @@ jobs:
           touch activity.txt
           for i in {1..60}; do
             echo "Commit $i" >> activity.txt
-            git config --global user.name "Your Name"
-            git config --global user.email "your-email@example.com"
+            git config --global user.name "malka1-cic"
+            git config --global user.email "malls-01-saga@icloud.com"
             git add .
             git commit --date="$(date -d "-$i days")" -m "Update activity"
           done
