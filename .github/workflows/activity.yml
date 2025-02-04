@@ -10,7 +10,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Gg
+      - name: Pull latest changes with rebase
+        run: |
+          git pull https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/malka1-cic/pop.git main --rebase
+
+      - name: Generate commits
         run: |
           touch activity.txt
           for i in {1..60}; do
