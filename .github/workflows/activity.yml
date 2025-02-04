@@ -20,4 +20,4 @@ jobs:
             git add .
             git commit --date="$(date -d "-$i days")" -m "Update activity"
           done
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/malka1-cic/pop.git main
